@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="t4is.uv.mx/compra"
+  xmlns:tns="t4is.uv.mx/compra" elementFormDefault="qualified">
+
+  <!-- Factura -->
+
+  <xs:element name="SolicitarFacturaRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fecha" type="xs:string" />
+        <xs:element name="forma_pago" type="xs:string" />
+        <xs:element name="subtotal" type="xs:double" />
+        <xs:element name="nombre" type="xs:string" />
+        <xs:element name="cantidad" type="xs:int" />
+        <xs:element name="precio" type="xs:double" />
+        <xs:element name="rfc" type="xs:string" />
+        <xs:element name="regimen" type="xs:string" />
+        <xs:element name="domicilio" type="xs:string" />
+        <xs:element name="descripcion" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarFacturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="uuid" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Inventario -->
+
+  <xs:element name="SolicitarUUIDRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="solicitud" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarUUIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="uuid" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
